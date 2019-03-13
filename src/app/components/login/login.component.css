@@ -1,0 +1,33 @@
+fieldset 
+{
+    border: 1px solid #ddd !important;
+    margin: 0;
+   
+    padding: 10px;       
+    position: relative;
+    border-radius:4px;
+    background-color:#f5f5f5;
+    padding-left:10px!important;
+}	
+
+    legend
+    {
+        font-size:14px;
+        font-weight:bold;
+        
+       
+        
+    }
+    #formWrapper{
+        padding-top: 10%;
+       
+    }
+    .row{
+        padding-left: 2%;
+    }
+    @media only screen and (max-width: 600px) {
+        #formWrapper{
+            padding-top: 20%;
+           
+        }
+      }
