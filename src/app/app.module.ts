@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { ReactiveFormsModule }    from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -11,6 +11,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { TraineeHomeComponent } from './components/trainee-home/trainee-home.component';
 import { TraineeHeaderComponent } from './components/trainee-header/trainee-header.component';
+import { AuthenticationService } from './_service/authenticationService';
+import { GetUsersService } from './_service/getUsersService';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,9 +30,14 @@ import { TraineeHeaderComponent } from './components/trainee-header/trainee-head
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+   
   ],
-  providers: [],
+  providers: [
+    AuthenticationService,
+    GetUsersService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
