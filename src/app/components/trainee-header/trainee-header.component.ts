@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'trainee-header',
   templateUrl: './trainee-header.component.html',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TraineeHeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+
+
+  }
 
   ngOnInit() {
   }

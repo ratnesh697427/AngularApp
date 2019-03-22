@@ -11,8 +11,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { TraineeHomeComponent } from './components/trainee-home/trainee-home.component';
 import { TraineeHeaderComponent } from './components/trainee-header/trainee-header.component';
-import { AuthenticationService } from './_service/authenticationService';
-import { GetUsersService } from './_service/getUsersService';
+import { AuthenticationService } from './_services/authentication.service';
+import { GetUsersService } from './_services/getUsers.service';
+import { HttpClientModule }    from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -32,7 +33,8 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-   
+    HttpClientModule
+
   ],
   providers: [
     AuthenticationService,
