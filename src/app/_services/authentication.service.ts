@@ -1,4 +1,4 @@
-import { GetUsersService } from '../_service/GetUsersService';
+import { GetUsersService } from 'src/app/_services/getUsers.service';
 import { Injectable } from '@angular/core';
 import { User } from '../_models';
 
@@ -10,34 +10,35 @@ import { User } from '../_models';
 export class AuthenticationService {
     UserList;
     service;
-    
+    temp=false;
     constructor( service: GetUsersService) {
         this.service=service;
-       
+
     }
 
 
     authenticate(username: String, password: string):boolean{
-       
-       
+
+
         this.service.getAllUsers()
         .forEach(usr => {
-            
-            
+
+
             if(usr.username == username && usr.password == password){
-               
-                return true;
-                
+               this.temp=true;
+
+
             }
-            
-           
+
+
         });
-           
-           return false;
-            
-        
-            
-        
+
+        return this.temp;
+
+
+
+
+
 
 
     }
